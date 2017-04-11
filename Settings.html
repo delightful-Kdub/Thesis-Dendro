@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <meta name="author" content="Krysta Harrison">
+    <meta name="description" content="#">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </head>
+  <body>
+  <div id="settingsBackground">
+
+    <header>
+      <div clas="logo"><img src="assets/Logo.png" alt="Dendro Logo" width="167px" height="58px"/></div>
+
+      <div class=pageHeading>
+        <h1>Settings</h1>
+      </div>
+
+      <div>
+        <button class="accountButton" onclick="location.href='Settings.html'"><img src="assets/icons/accountsIcon.png" alt="account icon" width="15px" height"25px"/>John</button>
+      </div>
+    </header>
+
+
+
+   <!-- inspired by http://codepen.io/anon/pen/wJymGK -->
+    <div class="tabPanel-widget">
+      <label for="tab-1" tabindex="0"></label>
+        <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+      <h2>Profile Info</h2>
+      <div>
+
+        <form id="profileInfoForm" action="/action_page.php" method="post">
+          <span>First Name:<input type="text" name="firstname" value="JS-John"></span><br>
+          <span>Last Name:<input type="text" name="lastname" value="JS-Lee"></span><br>
+          <span>Email:<input type="email" name="email" value="JS-email@email.com"></span><br>
+          <span>Research Type/s:<div id="checkboxes"><input type="checkbox" id="cbox1" value="first_checkbox"><label>Student
+                          <input type="checkbox" id="cbox2" value="second_checkbox"><label>Professor
+                          <input type="checkbox" id="cbox3" value="third_checkbox"><label>Professional
+                          <input type="checkbox" id="cbox4" value="fourth_checkbox"><label>Hobbyist</div></span><br><br>
+
+          <center><input class="greenBtn" type="submit" value="Update Profile Info"></center>
+        </form>
+
+      </div>
+
+      <label for="tab-2" tabindex="0"></label>
+      <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
+      <h2>Change Password</h2>
+      <div>
+        <form id="updatePswdForm" action="/action_page.php" method="post">
+          <span>Current Password:<input type="text" name="currentPswd"></span><br>
+          <span>New Password:<input type="text" name="newPswd"></span><br>
+          <span>Re-Enter New Password:<input type="text" name="VnewPswd"></span><br><br>
+
+          <center><input class="greenBtn" type="submit" value="Update Password"></center>
+        </form>
+
+      </div>
+
+      <label for="tab-3" tabindex="0"></label>
+      <input id="tab-3" type="radio" name="tabs" aria-hidden="true">
+      <h2>Browse Preferences</h2>
+      <div>
+        <form id="updatePswdForm" action="/action_page.php" method="post">
+          <span>Current Password:<input type="text" name="currentPswd"></span><br>
+          <span>New Password:<input type="text" name="newPswd"></span><br>
+          <span>Re-Enter New Password:<input type="text" name="VnewPswd"></span><br><br>
+
+          <center><input class="greenBtn" type="submit" value="Update Password"></center>
+        </form>
+
+      </div>
+
+      <label for="tab-4" tabindex="0"></label>
+      <input id="tab-4" type="radio" name="tabs" aria-hidden="true">
+      <h2>Account Level</h2>
+      <div>
+        <center>
+          <table style="width:100%">
+            <tr>
+              <th class="features">Features:</th>
+              <th class="free">Free:</th>
+              <th class="plus">Plus:</th>
+              <th class="premium">Premium:</th>
+            </tr>
+            <tr>
+              <td class="features">featureName</td>
+              <td class="freetd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="plustd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
+            </tr>
+            <tr>
+              <td class="features">featureName2</td>
+              <td class="freetd"><img src="assets/icons/redX.png"/></td>
+              <td class="plustd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
+            </tr>
+            <tr>
+              <td class="features">featureName3</td>
+              <td class="freetd"><img src="assets/icons/redX.png"/></td>
+              <td class="plustd"><img src="assets/icons/redX.png"/></td>
+              <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><br><button class="greenBtn">Upgrade to Plus</button></td>
+              <td><br><button class="greenBtn">Upgrade to Premium</button></td>
+            </tr>
+          </table>
+        </center>
+
+      </div>
+    </div>
+
+
+
+  </div>
+  </body>
+  </html>

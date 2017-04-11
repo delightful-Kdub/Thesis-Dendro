@@ -1,0 +1,632 @@
+body{
+  overflow: hidden;
+  margin: 0;
+}
+
+h1{
+  color: #003250;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+h2{
+  color: #003250;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+h3{
+  color: #003250;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 28pt;
+}
+
+h4{
+  color: #003250;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 18pt;
+}
+
+
+#creamTree{
+  position: absolute;
+  bottom: 0;
+  left: -300px;
+  z-index: -1;
+}
+
+
+header{
+  position: relative;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.logo {
+
+}
+
+#selectorWrap{
+  display: flex;
+}
+
+#blueTree{
+  width: 44px;
+  height: 49px;
+}
+
+header h4{
+  margin-left: -75px;
+  margin-top: 20px;
+}
+
+#treeSelector{
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 350px;
+  height: 65px;
+  background-color: #FBF9F4;
+  border-radius: 4px;
+  border: 2px solid #F1E8CF;
+  color: #003250;
+  font-size: 20pt;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+
+}
+
+.accountButton{
+  width: 135px;
+  height: 38px;
+  background-color: #FBF9F4;
+  border-radius: 4px;
+  border: 2px solid #F1E8CF;
+  margin-right: 5px;
+  color: #6B3E17;
+  padding-left: 0px;
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+
+.accountButton img{
+  margin-right: 5px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+
+.backToTreeButton{
+  width: 65px;
+  height: 38px;
+  background-color: #FBF9F4;
+  border-radius: 4px;
+  border: 2px solid #FBF9F4;
+  color: #6B3E17;
+  cursor: pointer;
+}
+
+.greenBtn{
+  background-color: #7FB7AB;
+  border-radius: 4px;
+  border: 2px solid #006750;
+  margin-right: -4px;
+  color: #F6EFDC;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+.greenBtn:hover{
+  background-color: #002019;
+  border-radius: 4px;
+  border: 2px solid #006750;
+  margin-right: -4px;
+  color: #F6EFDC;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+
+/* START vertically tabbed content*/
+
+.container{
+  width: 90%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+/*!
+ * inspired by: https://codepen.io/nik-savchenko/pen/xDIAe
+ */
+.tabordion .content{
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+}
+
+.tab-content{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 500px;
+  margin: 0px;
+  font-family: Avenir, Arial, sans-serif;
+  overflow-y: scroll;
+  display: none;
+}
+
+.open{
+  display: block;
+}
+
+
+.tabordion {
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  height: auto;
+  width: 100%;
+  height: 80%;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+
+.tabordion .menu{
+  position: absolute;
+  left: -233px;
+  top: 225px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+}
+
+.tabordion .menu label{
+  background: #8DBAB0;
+  opacity: 40%;
+  border-radius: 8px 8px 0px 0px;
+  cursor: pointer;
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 1.2em;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  position: relative;
+  width: 140px;
+}
+
+
+.paneHeader{
+  width: 90%;
+  height: 60px;
+  background: #006750;
+  padding: 0;
+  position: fixed;
+}
+
+/* START -- Each tabordion's sections different */
+ /*Notes*/
+.notes-content form{
+  margin-top: 60px;
+  height: 100%;
+}
+
+  /*Screenshots*/
+#screenshotsFilter{
+  text-align: center;
+  margin: auto;
+  width: 700px;
+  display: flex;
+  color: white;
+  font-family: Avenir, Arial, sans-serif;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#screenshotsFilter input{
+  justify-content: space-between;
+  font-weight: lighter;
+
+}
+
+/*this style Inspired by: http://codepen.io/vybz/pen/meeEeZ*/
+#gallery {
+  border: 1px solid #efefef;
+  padding: 4px 0 0 0;
+  margin-top: 60px;
+}
+
+#gallery img {
+  margin: 8px;
+  width: 214px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#gallery img:hover {
+  margin: 8px;
+  opacity: .8;
+}
+
+/*END style Inspired by: Copyright (c) 2017 by Dudley Storey (http://codepen.io/dudleystorey/pen/Kgofa)*/*/
+
+  /*History*/
+.history-content .paneHeader span{
+  float: right;
+  right: 0;
+}
+
+#worksCited{
+  width: 185px;
+  height: 38px;
+  background-color: #FBF9F4;
+  border-radius: 4px;
+  border: 2px solid #F1E8CF;
+  color: #6B3E17;
+  font-size: 12pt;
+  margin-top: 10px;
+  margin-right: 66px;
+
+}
+
+#printBtn{
+  margin-top: 10px;
+  margin-right: 85px;
+}
+
+#historyTable{
+  margin-top: 60px;
+}
+/* END -- Each tabordion's different pane header content*/
+
+
+
+/* END vertically tabbed content*/
+
+
+
+/* --------- ^^ Assets Tab Page ^^ --------- */
+
+
+
+/* -------- SETTINGS PAGE -------- */
+.assetsHeader h1{
+  margin-top: 0;
+}
+#settingsBackground{
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #FBF9F4;
+}
+/* tabbed content */
+/*-- inspired by http://codepen.io/anon/pen/wJymGK --*/
+
+.tabPanel-widget {
+  position: relative;
+  width: 800px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/**
+ * because labels come first in source order - we use z-index to move them in front of the headings
+ */
+.tabPanel-widget > label {
+  position: absolute;
+  z-index: 1;
+}
+
+/**
+ * labels and headings must share same values so grouping declarations in this rule prevents async edits (risk of breakage)
+ * line-height == height -> vertical centering
+ * the width dictates the offset for all headings but the first one: left offset = width * number of previous heading(s)
+ * note that width and offset of label/heading pair can be customized if necessary
+ */
+
+.tabPanel-widget > label,
+.tabPanel-widget > h2 {
+  font-size: 1.1em;
+  width: 9em;
+  height: 2em;
+  line-height: 2em;
+  font-style: italic;
+
+
+}
+
+/**
+ * position:relative is for the markers (the down arrow in tabs)
+ */
+.tabPanel-widget > h2 {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  color: #006750;
+}
+
+.tabPanel-widget > label {
+  border-bottom: 1px solid #006750;
+}
+
+/**
+ * all first level labels and headings after the very first ones
+ */
+.tabPanel-widget > label ~ label,
+.tabPanel-widget > h2 ~ h2 {
+  position: absolute;
+  top: 0;
+}
+
+
+/**
+ * We target all the label/heading pairs
+ * we increment the :nth-child() params by 4 as well as the left value (according to "tab" width)
+ */
+
+.tabPanel-widget label:nth-child(1),
+.tabPanel-widget h2:nth-child(3) {
+  left: 9em;
+}
+
+.tabPanel-widget label:nth-child(5),
+.tabPanel-widget h2:nth-child(7) {
+  left: 18em;
+}
+
+.tabPanel-widget label:nth-child(9),
+.tabPanel-widget h2:nth-child(11) {
+  left: 27em;
+}
+
+.tabPanel-widget label:nth-child(9),
+.tabPanel-widget h2:nth-child(11) {
+  left: 27em;
+}
+
+/**
+ * we visually hide all the panels
+ */
+.tabPanel-widget input + h2 + div {
+  position: absolute !important;
+  margin-top: 30px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+/**
+ * we reveal a panel depending on which control is selected
+ */
+.tabPanel-widget input:checked + h2 + div {
+  position: static !important;
+  padding: 1em !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+/**
+ * shows a hand cursor only to pointing device users
+ */
+.tabPanel-widget label:hover {
+  cursor: pointer;
+}
+
+.tabPanel-widget > div {
+  padding: 1em;
+}
+
+.tabPanel-widget form {
+  color: #003250;
+  font-family: Avenir, Arial, sans-serif;
+  font-size: 11pt;
+  width: 532px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.tabPanel-widget input[type="text"]{
+  border-color: #F1E8CF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  width: 337px;
+  height: 30px;
+  margin-bottom: 17px;
+}
+
+#profileInfoForm input[type="text"]{
+  margin-left: 112px;
+}
+
+#updatePswdForm input[name="currentPswd"]{
+  margin-left: 70px;
+}
+
+#updatePswdForm input[name="newPswd"]{
+  margin-left: 89px;
+}
+
+#updatePswdForm input[name="VnewPswd"]{
+  margin-left: 28px;
+}
+
+.tabPanel-widget input[type="email"]{
+  border-color: #F1E8CF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  width: 337px;
+  height: 30px;
+  margin-bottom: 17px;
+}
+
+
+input[type=text]:focus,
+input[type=email]:focus{
+  outline: none;
+  border-color: #5C3516;
+}
+
+
+#profileInfoForm input[type="email"]{
+  margin-left: 145px;
+}
+
+#profileInfoForm #checkboxes{
+    margin-left: 185px;
+    display: flex;
+}
+
+.tabPanel-widget textarea{
+  border-color: #F1E8CF;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  width: 337px;
+  height: 30px;
+}
+.tabPanel-widget table {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabPanel-widget table th{
+  width: 190px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+
+}
+
+.tabPanel-widget table .features{
+  color: #003250;
+}
+
+.tabPanel-widget table .free{
+  background-color: #4A4A4A;
+  color: white;
+}
+
+.tabPanel-widget table .plus{
+  background-color: #003250;
+  color: white;
+}
+
+.tabPanel-widget table .premium{
+  background-color: #0B6D57;
+  color: white;
+}
+
+.tabPanel-widget table td{
+  width: 190px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.freetd{
+  background-color: #C9C9C9;
+}
+
+.plustd{
+  background-color: #7CA4BB;
+}
+
+.premiumtd{
+  background-color: #A1CDC3;
+}
+
+
+/**
+ * we hide section radio buttons and also remove them from the flow
+ */
+.tabPanel-widget input[name="tabs"] {
+  opacity: 0;
+  position: absolute;
+}
+
+
+/**
+ * this is to style the tabs when they get focus (visual cue)
+ */
+
+.tabPanel-widget input[name="tabs"]:focus + h2 {
+  outline: 1px dotted #000;
+  outline-offset: 10px;
+}
+
+
+/**
+ * reset of the above within the tab panel (for pointing-device users)
+ */
+.tabPanel-widget:hover h2 {
+  outline: none !important;
+}
+
+/**
+ * visual cue of the selection
+ */
+.tabPanel-widget input[name="tabs"]:checked + h2 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+/**
+ * the marker for tabs (down arrow)
+ */
+.tabPanel-widget input[name="tabs"]:checked + h2:after {
+  content: '';
+  margin: auto;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #006750;
+}
+
+@media print {
+
+  img, header, .tabordion label, #worksCited{
+    display: none;
+  }
+
+
+} /*put display none for everything EXCEPT what I want to print. use print button to see what is going to show when you do this; then STYLE it better in here
+
+
+
+/* END tab panel widget*/
