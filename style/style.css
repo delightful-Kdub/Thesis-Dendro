@@ -62,31 +62,38 @@ header h4{
   margin-top: 20px;
 }
 
-#treeSelector{
+#bigSelector{
   margin-left: 10px;
   margin-top: 0px;
   width: 350px;
   height: 65px;
+  font-size: 20pt;
+}
+
+.selector{
+  min-width: 200px;
   background-color: #FBF9F4;
   border-radius: 4px;
   border: 2px solid #F1E8CF;
   color: #003250;
-  font-size: 20pt;
   font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-
 
 }
 
 .accountButton{
-  width: 135px;
-  height: 38px;
+  margin-right: 5px;
+}
+
+.lightButton{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #FBF9F4;
   border-radius: 4px;
   border: 2px solid #F1E8CF;
-  margin-right: 5px;
   color: #6B3E17;
-  padding-left: 0px;
-  font-size: 12pt;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -118,7 +125,7 @@ header h4{
   padding-bottom: 5px;
   padding-left: 8px;
   padding-right: 8px;
-  font-size: 12pt;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -132,7 +139,7 @@ header h4{
   padding-bottom: 5px;
   padding-left: 8px;
   padding-right: 8px;
-  font-size: 12pt;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -201,8 +208,6 @@ header h4{
 }
 
 .tabordion .menu label{
-  background: #8DBAB0;
-  opacity: 40%;
   border-radius: 8px 8px 0px 0px;
   cursor: pointer;
   font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
@@ -210,12 +215,21 @@ header h4{
   font-weight: 100;
   font-style: italic;
   text-align: center;
-  color: white;
   padding: 10px;
   position: relative;
   width: 140px;
 }
 
+.inactive{
+  background: #8DBAB0;
+  opacity: 40%;
+  color: grey;
+}
+
+.activetab{
+  background: #006750; !important
+  color: white; !important
+}
 
 .paneHeader{
   width: 90%;
@@ -231,6 +245,8 @@ header h4{
   margin-top: 60px;
   height: 100%;
 }
+
+
 
   /*Screenshots*/
 #screenshotsFilter{
@@ -352,7 +368,7 @@ header h4{
 .tabPanel-widget > label,
 .tabPanel-widget > h2 {
   font-size: 1.1em;
-  width: 9em;
+  width: 11em;
   height: 2em;
   line-height: 2em;
   font-style: italic;
@@ -391,22 +407,22 @@ header h4{
 
 .tabPanel-widget label:nth-child(1),
 .tabPanel-widget h2:nth-child(3) {
-  left: 9em;
+  left: 6em;
 }
 
 .tabPanel-widget label:nth-child(5),
 .tabPanel-widget h2:nth-child(7) {
-  left: 18em;
+  left: 15em;
 }
 
 .tabPanel-widget label:nth-child(9),
 .tabPanel-widget h2:nth-child(11) {
-  left: 27em;
+  left: 25em;
 }
 
-.tabPanel-widget label:nth-child(9),
-.tabPanel-widget h2:nth-child(11) {
-  left: 27em;
+.tabPanel-widget label:nth-child(13),
+.tabPanel-widget h2:nth-child(15) {
+  left: 35em;
 }
 
 /**
@@ -630,3 +646,626 @@ input[type=email]:focus{
 
 
 /* END tab panel widget*/
+
+
+/***Browsing page style ***/
+
+/*Tool bar*/
+
+#toptoolbar{
+  width: 100%;
+  height: 30px;
+  background-color: #006750;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#toptoolbar p{
+  color: #F1E8CF;
+}
+
+/* The toggle - the box around the slider */
+.togglehiders{
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.toggle input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #A50418;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #8CD3AA;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #8CD3AA;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+#addToSiteBlockList {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+}
+
+/*tip carousel*/
+/*inspired by: http://codepen.io/cassidoo/pen/MyaWzp*/
+#tipcarousel img{
+  z-index: 2;
+}
+
+.content-slider {
+  width: 100%;
+  height: 30px;
+}
+
+.tipSlider {
+  height: 30px;
+  width: 300px;
+  margin-top: -30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 30px;
+  background: #89AEC2; /* For browsers that do not support gradients */
+  background: linear-gradient(#010F17, #89AEC2, #010F17); /* Standard syntax - only has to work in Chrome */
+
+}
+
+.tipSlider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.tipSlider li {
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  top: -35px;
+  list-style: none;
+}
+
+.tipSlider li:hover{
+  cursor: pointer;
+}
+
+.tipSlider .tip {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.0;
+  color: white;
+}
+
+
+.tipSlider li.anim1 {
+  -moz-animation: cycle 15s linear infinite;
+  -webkit-animation: cycle 15s linear infinite;
+  animation: cycle 15s linear infinite;
+}
+
+.tipSlider li.anim2 {
+  -moz-animation: cycle2 15s linear infinite;
+  -webkit-animation: cycle2 15s linear infinite;
+  animation: cycle2 15s linear infinite;
+}
+
+.tipSlider li.anim3 {
+  -moz-animation: cycle3 15s linear infinite;
+  -webkit-animation: cycle3 15s linear infinite;
+  animation: cycle3 15s linear infinite;
+}
+
+.tipSlider li.anim4 {
+  -moz-animation: cycle4 15s linear infinite;
+  -webkit-animation: cycle4 15s linear infinite;
+  animation: cycle4 15s linear infinite;
+}
+
+.tipSlider li.anim5 {
+  -moz-animation: cycle5 15s linear infinite;
+  -webkit-animation: cycle5 15s linear infinite;
+  animation: cycle5 15s linear infinite;
+}
+
+.tipSlider:hover li {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-moz-keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -35px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes cycle2 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  16% {
+    top: -35px;
+    opacity: 0;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle3 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  36% {
+    top: -35px;
+    opacity: 0;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+  }
+  60% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle4 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  56% {
+    top: -35px;
+    opacity: 0;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  76% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle5 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  76% {
+    top: -35px;
+    opacity: 0;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+  }
+  84% {
+    top: 0px;
+    opacity: 1;
+  }
+  96% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@-webkit-keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -35px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cycle2 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  16% {
+    top: -35px;
+    opacity: 0;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle3 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  36% {
+    top: -35px;
+    opacity: 0;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle4 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  56% {
+    top: -35px;
+    opacity: 0;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  76% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -35px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle5 {
+  0% {
+    top: -35px;
+    opacity: 0;
+  }
+  76% {
+    top: -35px;
+    opacity: 0;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+  }
+  84% {
+    top: 0px;
+    opacity: 1;
+  }
+  96% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 35px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.toTreeAssets{
+  cursor: pointer;
+}
+
+
+/* slideout inspired by  https://www.w3schools.com/howto/howto_js_sidenav.asps  */
+
+/*Open button*/
+#sidenavOpen{
+  position: fixed;
+  right: 0;
+  margin-top: 60px;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    margin-top: 30px;
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    display: flex;
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 60;
+    left: 0px;
+    font-size: 36px;
+    float: left;
+}
+
+.sidenav .inner{
+  position: absolute;
+  height: 100%;
+  width: 250px;
+  background-color: #006750;
+  float: right;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.sidenav .inner textarea{
+  position: relative;
+  height: 60%;
+}
+
+.sidenav .inner .lightButton{
+  margin-top: 15px;
+  bottom: 0px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-right .5s;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+iframe{
+  display: block;
+  height: 100vh;        /* Viewport-relative units */
+  width: 100%;
+  border: none;
+}

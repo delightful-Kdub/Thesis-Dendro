@@ -19,9 +19,13 @@
         <h1>Settings</h1>
       </div>
 
-      <div>
-        <button class="accountButton" onclick="location.href='Settings.html'"><img src="assets/icons/accountsIcon.png" alt="account icon" width="15px" height"25px"/>John</button>
-      </div>
+      <!-- <div>
+        <button class="accountButton lightButton" onclick="location.href='Settings.html'"><img src="assets/icons/accountsIcon.png" alt="account icon" width="10px" height"20px"/>John</button>
+      </div> -->
+
+      <span class="toTreeAssets">
+        <a onclick="location.href='AssetsTab.html'"><img src="assets/icons/GoToTree.png"/></a>
+      </span>
     </header>
 
 
@@ -37,10 +41,14 @@
           <span>First Name:<input type="text" name="firstname" value="JS-John"></span><br>
           <span>Last Name:<input type="text" name="lastname" value="JS-Lee"></span><br>
           <span>Email:<input type="email" name="email" value="JS-email@email.com"></span><br>
-          <span>Research Type/s:<div id="checkboxes"><input type="checkbox" id="cbox1" value="first_checkbox"><label>Student
-                          <input type="checkbox" id="cbox2" value="second_checkbox"><label>Professor
-                          <input type="checkbox" id="cbox3" value="third_checkbox"><label>Professional
-                          <input type="checkbox" id="cbox4" value="fourth_checkbox"><label>Hobbyist</div></span><br><br>
+          <span>Research Type/s:
+            <div id="checkboxes">
+              <input type="checkbox" id="cbox1" value="first_checkbox"><label>Student</label>
+              <input type="checkbox" id="cbox2" value="second_checkbox"><label>Professor</label>
+              <input type="checkbox" id="cbox3" value="third_checkbox"><label>Professional</label>
+              <input type="checkbox" id="cbox4" value="fourth_checkbox"><label>Hobbyist</label>
+            </div>
+          </span><br><br>
 
           <center><input class="greenBtn" type="submit" value="Update Profile Info"></center>
         </form>

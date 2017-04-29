@@ -25,7 +25,7 @@
 
         <h4>This Tree:</h4>
 
-        <select id="treeSelector">
+        <select id="bigSelector" class="selector">
           <option value="Project 1">Project 1</option>
           <option value="Project 2">Project 2</option>
           <option value="Project 3">Project 3</option>
@@ -33,7 +33,7 @@
       </div>
 
       <div>
-        <button class="accountButton" onclick="location.href='Settings.html'"><img src="assets/icons/accountsIcon.png" alt="account icon" width="15px" height"25px"/>John</button>
+        <button class="accountButton lightButton" onclick="location.href='Settings.html'"><img src="assets/icons/accountsIcon.png" alt="account icon" width="10px" height"20px"/>John</button>
       </div>
     </header>
 
@@ -45,9 +45,9 @@
         <div class="tabordion">
 
           <div class="menu">
-            <label id="history">History</label>
-            <label id="screenshots">Screenshots</label>
-            <label id="notes">Notes</label>
+            <label id="history" class="inactive">History</label>
+            <label id="screenshots" class="inactive">Screenshots</label>
+            <label id="notes" class="activetab">Notes</label>
           </div>
 
           <div class="content">
@@ -97,7 +97,7 @@
             <div class="history-content tab-content">
               <div class="paneHeader">
                 <span>
-                  <button id="worksCited">Generate Works Cited</button>
+                  <button id="worksCited" onclick="location.href='http://Dendro.krystawatts.com/download/generatedCitation.pages'">Generate Works Cited</button>
                   <a href="#" id="printbutton">
                     <img src="assets/icons/Print.png" alt="print icon" id="printBtn"/></a>
                 </span>
