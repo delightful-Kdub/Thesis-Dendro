@@ -45,9 +45,9 @@
         <div class="tabordion">
 
           <div class="menu">
-            <label id="history" class="inactive">History</label>
-            <label id="screenshots" class="inactive">Screenshots</label>
-            <label id="notes" class="activetab">Notes</label>
+            <label id="history" class="tab">History</label>
+            <label id="screenshots" class="tab">Screenshots</label>
+            <label id="notes" class="tab activetab">Notes</label>
           </div>
 
           <div class="content">
@@ -56,7 +56,7 @@
               <div class="paneHeader"></div>
               <form>
                 <p>
-                  <textarea name="" cols="50" rows="15"> This is the content </textarea>
+                  <textarea class="notesTextArea" name="" cols="50" rows="15"> </textarea>
                   <!--<input type="submit" value="save" /> -->
                 </p>
               </form>
@@ -103,9 +103,7 @@
                 </span>
               </div>
               <div id="historyTable">
-                <p>History Table goes here</p>
-                  <iframe src="chrome://history/"></iframe>
-
+                <img id="history" src="assets/history.png" alt="browse history for this project" />
 
               </div>
             </div>

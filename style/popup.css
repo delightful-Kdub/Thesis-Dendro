@@ -1,6 +1,8 @@
 body{
   background-color: #FFFCF4;
+  font-family: Avenir, "Avenir Roman", "Helvetica", Helvetica, sans-serif;
 }
+
 
 #popup h1{
   color: purple;
@@ -12,7 +14,7 @@ body{
 }
 
 #popup label{
-  color: darkblue;
+  color: #003250;
 }
 
 #popup{
@@ -29,6 +31,14 @@ body{
 
 }
 
+.email{
+  margin-right: 30px;
+}
+
+.pswrd{
+  margin-right: 10px;
+}
+
 .button{
   width: 135px;
   height: 38px;
@@ -41,4 +51,8 @@ body{
   font-size: 13px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.logo{
+  margin-bottom: 15px;
 }

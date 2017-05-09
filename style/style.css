@@ -171,7 +171,7 @@ header h4{
   min-height: 400px;
   max-height: 500px;
   margin: 0px;
-  font-family: Avenir, Arial, sans-serif;
+  font-family: Avenir, "Avenir Roman", "Helvetica", Helvetica, sans-serif;
   overflow-y: scroll;
   display: none;
 }
@@ -212,23 +212,27 @@ header h4{
   cursor: pointer;
   font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   font-size: 1.2em;
-  font-weight: 100;
-  font-style: italic;
   text-align: center;
   padding: 10px;
   position: relative;
   width: 140px;
+
 }
 
-.inactive{
+.tab{
   background: #8DBAB0;
   opacity: 40%;
   color: grey;
+  font-style: italic;
+  font-weight: 100;
 }
 
 .activetab{
-  background: #006750; !important
-  color: white; !important
+  background: #006750;
+  color: #FFFFFF;
+  opacity: 100%;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .paneHeader{
@@ -255,7 +259,7 @@ header h4{
   width: 700px;
   display: flex;
   color: white;
-  font-family: Avenir, Arial, sans-serif;
+  font-family: Avenir, "Avenir Roman", "Helvetica", Helvetica, sans-serif;
   justify-content: space-between;
   padding-top: 20px;
 }
@@ -461,7 +465,7 @@ header h4{
 
 .tabPanel-widget form {
   color: #003250;
-  font-family: Avenir, Arial, sans-serif;
+  font-family: Avenir, "Avenir Roman", "Helvetica", Helvetica, sans-serif;
   font-size: 11pt;
   width: 532px;
   margin-left: auto;
@@ -522,6 +526,10 @@ input[type=email]:focus{
     display: flex;
 }
 
+#school{
+  margin-left: 103px;
+}
+
 .tabPanel-widget textarea{
   border-color: #F1E8CF;
   border-radius: 4px;
@@ -540,12 +548,14 @@ input[type=email]:focus{
   width: 190px;
   height: 30px;
   padding: 0;
-  margin: 0;
 
 }
 
+
+
 .tabPanel-widget table .features{
   color: #003250;
+  font-family: Avenir, "Avenir Roman", "Helvetica", Helvetica, sans-serif;
 }
 
 .tabPanel-widget table .free{
@@ -641,7 +651,13 @@ input[type=email]:focus{
   }
 
 
-} /*put display none for everything EXCEPT what I want to print. use print button to see what is going to show when you do this; then STYLE it better in here
+} /*put display none for everything EXCEPT what I want to print. use print button to see what is going to show when you do this; then STYLE it better in here*/
+
+#explanation{
+  width: 100%;
+  text-align: center;
+}
+
 
 
 

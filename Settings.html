@@ -38,9 +38,9 @@
       <div>
 
         <form id="profileInfoForm" action="/action_page.php" method="post">
-          <span>First Name:<input type="text" name="firstname" value="JS-John"></span><br>
-          <span>Last Name:<input type="text" name="lastname" value="JS-Lee"></span><br>
-          <span>Email:<input type="email" name="email" value="JS-email@email.com"></span><br>
+          <span>First Name:<input type="text" name="firstname" placeholder=""></span><br>
+          <span>Last Name:<input type="text" name="lastname" placeholder=""></span><br>
+          <span>Email:<input type="email" name="email" placeholder="jlee@gmail.com"></span><br>
           <span>Research Type/s:
             <div id="checkboxes">
               <input type="checkbox" id="cbox1" value="first_checkbox"><label>Student</label>
@@ -48,6 +48,10 @@
               <input type="checkbox" id="cbox3" value="third_checkbox"><label>Professional</label>
               <input type="checkbox" id="cbox4" value="fourth_checkbox"><label>Hobbyist</label>
             </div>
+          </span><br>
+          <span>Institution/s:
+            <span id="school">Philadelphia University</span>
+
           </span><br><br>
 
           <center><input class="greenBtn" type="submit" value="Update Profile Info"></center>
@@ -74,6 +78,7 @@
       <h2>Browse Preferences</h2>
       <div>
         <form id="updatePswdForm" action="/action_page.php" method="post">
+          <p id="explanation">List the websites you don't want to see when <b>Hide Sites</b> is enabled. You can also ass sites you encounter to this list by checking <b>Add to site hide list</b> while browsing.</p><br/>
           <span>Current Password:<input type="text" name="currentPswd"></span><br>
           <span>New Password:<input type="text" name="newPswd"></span><br>
           <span>Re-Enter New Password:<input type="text" name="VnewPswd"></span><br><br>
@@ -96,19 +101,37 @@
               <th class="premium">Premium:</th>
             </tr>
             <tr>
-              <td class="features">featureName</td>
+              <td class="features">Total Storage:</td>
               <td class="freetd"><img src="assets/icons/greenCheck.png"/></td>
               <td class="plustd"><img src="assets/icons/greenCheck.png"/></td>
               <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
             </tr>
             <tr>
-              <td class="features">featureName2</td>
+              <td class="features">Save Notes</td>
+              <td class="freetd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="plustd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
+            </tr>
+            <tr>
+              <td class="features">Save Images</td>
+              <td class="freetd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="plustd"><img src="assets/icons/greenCheck.png"/></td>
+              <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
+            </tr>
+            <tr>
+              <td class="features">Hide Sites and Ads</td>
               <td class="freetd"><img src="assets/icons/redX.png"/></td>
               <td class="plustd"><img src="assets/icons/greenCheck.png"/></td>
               <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
             </tr>
             <tr>
-              <td class="features">featureName3</td>
+              <td class="features">Generate Citations</td>
+              <td class="freetd"><img src="assets/icons/redX.png"/></td>
+              <td class="plustd"><img src="assets/icons/redX.png"/></td>
+              <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
+            </tr>
+            <tr>
+              <td class="features">Database Access</td>
               <td class="freetd"><img src="assets/icons/redX.png"/></td>
               <td class="plustd"><img src="assets/icons/redX.png"/></td>
               <td class="premiumtd"><img src="assets/icons/greenCheck.png"/></td>
